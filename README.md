@@ -6,9 +6,7 @@ A graph-based fraud detection system built with PyTorch Geometric, trained on th
 
 ## Project Overview
 
-Financial fraud detection is naturally a graph problem — accounts are nodes, transactions are edges, and fraudulent behavior often forms detectable patterns in the network topology. This project explores whether graph neural networks can exploit that structure better than feature-only baselines.
-
-**Key finding:** GraphSAGE (F1=0.475) underperforms Random Forest (F1=0.677) on identical node features, demonstrating that basic GNN architectures don't automatically beat tree methods when node features are already highly informative. 
+Financial fraud detection is naturally a graph problem, accounts are nodes, transactions are edges, and fraudulent behavior often forms detectable patterns in the network topology. This project explores whether graph neural networks can exploit that structure better than feature-only baselines.
 
 ---
 
@@ -42,9 +40,8 @@ Each account node is described by aggregated statistics computed from its transa
 
 All features are normalized to [0, 1].
 
-```
 
-### Training Details
+## Training Details
 
 | Setting | Value |
 |---|---|
@@ -79,13 +76,12 @@ All features are normalized to [0, 1].
 
 ### What This Means
 
-The GNN has access to *more* information than the baselines (graph topology + features) but scores lower than Random Forest. This is not evidence that graph structure is useless — it reflects that:
+The GNN has access to *more* information than the baselines (graph topology + features) but scores lower than Random Forest. This is not evidence that graph structure is useless, it reflects that:
 
 1. **Node features computed from the full sample are already highly informative.** Random Forest exploits them directly without needing to propagate through the graph.
 2. **Basic GNN architectures need richer graph structure to shine.** In production settings where new accounts have sparse history, neighborhood aggregation would provide a stronger advantage.
 3. **GNN beats Logistic Regression and XGBoost**, showing it does extract meaningful signal beyond simple linear combinations.
 
----
  
 
 ## References
