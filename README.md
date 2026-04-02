@@ -9,6 +9,10 @@ A graph-based fraud detection system built with PyTorch Geometric, trained on th
 Financial fraud detection is naturally a graph problem, accounts are nodes, transactions are edges, and fraudulent behavior often forms detectable patterns in the network topology. This project explores whether graph neural networks can exploit that structure better than feature-only baselines.
 
 ---
+## Pipeline Overview
+
+![Project Summary](project_summary.svg)
+---
 
 ## Graph Design
 
