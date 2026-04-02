@@ -87,9 +87,3 @@ The GNN has access to *more* information than the baselines (graph topology + fe
 3. **GNN beats Logistic Regression and XGBoost**, showing it does extract meaningful signal beyond simple linear combinations.
 
  
-
-## References
-
-- Lopez-Rojas, E. A., Elmir, A., & Axelsson, S. (2016). *PaySim: A financial mobile money simulator for fraud detection.* EMSS 2016.
-- Hamilton, W., Ying, Z., & Leskovec, J. (2017). *Inductive Representation Learning on Large Graphs.* NeurIPS 2017. (GraphSAGE)
-- Fey, M., & Lenssen, J. E. (2019). *Fast Graph Representation Learning with PyTorch Geometric.* ICLR Workshop 2019.
